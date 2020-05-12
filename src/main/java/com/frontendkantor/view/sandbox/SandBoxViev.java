@@ -2,14 +2,14 @@ package com.frontendkantor.view.sandbox;
 
 import com.frontendkantor.domain.crypto.CryptoCurrencyDto;
 import com.frontendkantor.service.CryptoService;
-import com.frontendkantor.view.MainView;
+import com.frontendkantor.view.MainLayout;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
 
-@Route(value = "sandbox", layout = MainView.class)
+@Route(value = "sandbox", layout = MainLayout.class)
 public class SandBoxViev extends Div {
     @Autowired
     CryptoService cryptoService;

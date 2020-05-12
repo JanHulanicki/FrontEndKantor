@@ -8,22 +8,22 @@ import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
 
-@Route(value = "crypto", layout = MainView.class)
+@Route(value = "crypto", layout = MainLayout.class)
 public class AllCryptoViev extends Div {
     @Autowired
     CryptoService cryptoService;
     private CryptoCurrencyDto cryptoCurrencyDto;
     private Grid<CryptoCurrencyDto> cryptoCurrencyGrid = new Grid<>();
-    private Button getAllCryptoCurrency; //= new Button("Get All Stock");
+    private Button getAllCryptoCurrency;
 
     public AllCryptoViev() {
-        addCryptoCurriencyGridColumns();
+        addCryptoCurrencyGridColumns();
         add(cryptoCurrencyGrid);
         refreshCryptoCurrencyButton();
         add(getAllCryptoCurrency);
     }
 
-    private void addCryptoCurriencyGridColumns() {
+    private void addCryptoCurrencyGridColumns() {
         cryptoCurrencyGrid.addColumn(cryptoCurrencyDto -> cryptoCurrencyDto.getRealtimeCurrencyExchangeRatedDto().get_id())
                 .setHeader("ID")
                 .setSortable(true)

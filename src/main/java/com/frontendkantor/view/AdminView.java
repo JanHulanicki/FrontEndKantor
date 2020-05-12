@@ -2,7 +2,6 @@ package com.frontendkantor.view;
 
 import com.frontendkantor.domain.sandbox.Address;
 import com.frontendkantor.domain.sandbox.Person;
-import com.frontendkantor.view.MainView;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Span;
@@ -12,7 +11,7 @@ import com.vaadin.flow.router.Route;
 import java.util.ArrayList;
 import java.util.List;
 
-@Route(value = "admin", layout = MainView.class)
+@Route(value = "admin", layout = MainLayout.class)
 public class AdminView extends Div {
     public AdminView() {
         List<Person> personList = new ArrayList<>();

@@ -18,10 +18,14 @@ ext {
 
 dependencies {
     compile('com.google.code.gson:gson:2.8.5')
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+   // compile('org.springframework.security', name: 'spring-security-config', version: '3.2.0.RELEASE')
     implementation 'com.vaadin:vaadin-spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    testImplementation 'org.springframework.security:spring-security-test'
     implementation('org.springframework.boot:spring-boot-starter-data-jpa')
     implementation('org.springframework.boot:spring-boot-starter-web')
     compileOnly('org.projectlombok:lombok')

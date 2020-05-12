@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Arrays;
 
-@Route(value = "allnbpcurrency", layout = MainView.class)
+@Route(value = "allnbpcurrency", layout = MainLayout.class)
 public class AllNbpCurrencyView extends Div {
     @Autowired
     NbpCurrencyService nbpCurrencyService;
