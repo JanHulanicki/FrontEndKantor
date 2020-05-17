@@ -2,7 +2,6 @@ package com.frontendkantor.view;
 
 import com.frontendkantor.domain.stock.StockDto;
 import com.frontendkantor.service.StockService;
-import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Div;
@@ -50,7 +49,5 @@ public class AllStockViev extends Div {
 
             refreshStockGrid(stockGrid);
         });
-
     }
-
 }

@@ -10,18 +10,17 @@ public class ConfigureUIServiceInitListener implements VaadinServiceInitListener
     @Override
     public void serviceInit(ServiceInitEvent event) {
 
-            event.getSource().addUIInitListener(uiEvent -> {
-                final UI ui = uiEvent.getUI();
-                ui.addBeforeEnterListener(this::beforeEnter); //
-            });
-        }
-
+        event.getSource().addUIInitListener(uiEvent -> {
+            final UI ui = uiEvent.getUI();
+            ui.addBeforeEnterListener(this::beforeEnter);
+        });
+    }
 
 
     private void beforeEnter(BeforeEnterEvent event) {
-        if (!MainLayout.class.equals(event.getNavigationTarget()) //
-                && !SecurityUtils.isUserLoggedIn()) { //
-            event.rerouteTo(MainLayout.class); //
+        if (!MainLayout.class.equals(event.getNavigationTarget())
+                && !SecurityUtils.isUserLoggedIn()) {
+            event.rerouteTo(MainLayout.class);
         }
     }
 }

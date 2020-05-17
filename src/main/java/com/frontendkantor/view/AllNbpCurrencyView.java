@@ -39,7 +39,6 @@ public class AllNbpCurrencyView extends Div {
         nbpCurrencyGrid.addColumn(nbpCurrencyDto -> Arrays.stream(nbpCurrencyDto.getRates()).iterator().next().getMid())
                 .setHeader("PRICE")
                 .setSortable(true);
-
     }
 
     private void refreshNbpCurrencyGrid(Grid<NbpCurrencyDto> grid) {
@@ -52,5 +51,4 @@ public class AllNbpCurrencyView extends Div {
             refreshNbpCurrencyGrid(nbpCurrencyGrid);
         });
     }
-
 }
