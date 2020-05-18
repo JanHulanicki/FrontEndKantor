@@ -7,5 +7,5 @@ git :
 https://github.com/JanHulanicki/FrontEndKantor
 
 
-frontend git:
+backend git:
 https://github.com/JanHulanicki/KantorBackendRestApi
